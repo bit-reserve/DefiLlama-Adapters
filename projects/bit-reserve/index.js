@@ -7,6 +7,7 @@ async function coreTvl(api) {
 }
 
 async function sonicTvl(api) {
+
   const tokens = await api.fetchList({ lengthAbi: 'approvedTokens', itemAbi: 'approvedRestakedLSTs', target: RS_CONTRACT })
   return api.sumTokens({ owner: RS_CONTRACT, tokens })
 }
